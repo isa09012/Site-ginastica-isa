@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+}
+
+.menu {
+    position: sticky;
+    background-color: darkcyan;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    width: 90%;
+}
+
+.menu ul li {
+    list-style-type: none;
+    font-size: 24px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+#logo {
+    width: 10%;
+}
+
+header {
+    position: absolute;
+    top: 40vh;
+    left: 30vw;
+    font-size: 28px;
+}
+
+h1,
+h2 {
+    color: aquamarine;
+}
+
+header>h1,
+header>h2 {
+    color: rgb(238, 6, 168);
+    text-shadow: 3px 3px 5px black;
+}
+
+img {
+    width: 100vw;
+    height: auto
+}
