@@ -218,5 +218,6 @@ main>p {
         position: fixed;
         top: 15px;
         right: 15px;
+        color: black;
     }
 }
