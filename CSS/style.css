@@ -5,6 +5,18 @@ body {
     text-align: center;
 }
 
+/* Oculta o botão hambúrguer no desktop */
+.menu .hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 48px;
+    margin-top: 4vh;
+    margin-right: 2vh;
+}
+
 .menu {
     position: sticky;
     background-color: darkcyan;
@@ -79,8 +91,15 @@ header>h2 {
     object-fit: cover;
 }
 
+main {
+    max-width: 80%;
+    margin: auto;
+}
+
 .ginasticaImg {
     margin: 2rem 0 4rem;
+    max-width: 80%;
+    width: 600px;
 }
 
 #carouselExample {
@@ -106,8 +125,9 @@ main>p {
 
 .mainOnTop {
     position: absolute;
-    top: 20%;
+    top: 30%;
     width: 100%;
+    max-width: 100%;
 }
 
 .mainOnTop>h1 {
@@ -153,4 +173,50 @@ main>p {
 #accordionFlushExample {
     width: 80%;
     margin: auto;
+}
+
+/* Estilo mobile */
+@media (max-width: 768px) {
+    .menu .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: #eee;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2rem 1rem;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        gap: 20px;
+        z-index: 200;
+    }
+
+    .menu .nav-links li:first-child {
+        margin-top: 10rem;
+    }
+
+    .menu .nav-links li {
+        margin-bottom: 2rem;
+        font-size: 20px;
+    }
+
+    /* When .show is toggled, bring menu in */
+    .menu .nav-links.show {
+        transform: translateX(0);
+    }
+
+    .menu .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 300;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+    }
 }
